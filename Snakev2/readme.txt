@@ -1,1 +1,2 @@
-Recreating the classic Nokia Snake game using Python and the Turtle graphics module
+Recreating the classic Nokia Snake game using Python and the Turtle graphics module. 
+I separated the code into individual modules to import them into main.py
