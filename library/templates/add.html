@@ -1,0 +1,31 @@
+{% extends "bootstrap/base.html" %}
+
+{% block title %}Add Book{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h1>Add Book</h1>
+        <br>
+        <form action="{{ url_for('add') }}" method="POST" class="form">
+
+            <label>Book Name</label>
+            <input type="text" name="title">
+
+            <label>Book Author</label>
+            <input type="text" name="author">
+
+            <label>Rating</label>
+            <input type="text" name="rating">
+
+            <button type="submit" class="btn">Add Book</button>
+
+        </form>
+
+        <br>
+        <!-- <a href="{{ url_for('add') }}">Reset</a> -->
+        <br>
+        <a href="{{ url_for('home') }}">Back to Library</a>
+
+    </div>
+
+{% endblock %}

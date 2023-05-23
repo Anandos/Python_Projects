@@ -1,0 +1,39 @@
+{% extends "bootstrap/base.html" %}
+
+{% block title %}Edit Book{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h1>Edit Book</h1>
+        <br>
+        <form action="{{ url_for('edit', book_id= book.id) }}" method="POST" class="form">
+
+            <label>ID: {{ book.id }}</label>
+            <input type="hidden" value="{{ book.id }}">
+            <br>
+
+            <label>Title: {{ book.title }}</label>
+            <br>
+
+            <label>Author: {{ book.author }}</label>
+            <br>
+
+            <label>Current Rating: {{ book.rating }}</label>
+            <br>
+
+            <input type="text" name="rating">
+            <br>
+            <br>
+
+            <button type="submit" class="btn">Edit Rating</button>
+
+        </form>
+
+        <br>
+        <!-- <a href="{{ url_for('add') }}">Reset</a> -->
+        <br>
+        <a href="{{ url_for('home') }}">Back to Library</a>
+
+    </div>
+
+{% endblock %}

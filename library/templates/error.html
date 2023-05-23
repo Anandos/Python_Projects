@@ -1,0 +1,18 @@
+{% extends "bootstrap/base.html" %}
+
+{% block title %}Error{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h1>😩</h1>
+        <br>
+        
+        <h3>Error: {{ msg }}</h3 class="alert">
+
+        <br>
+        <br>
+        <a href="{{ url_for('home') }}">Back to Library</a>
+
+    </div>
+
+{% endblock %}
